@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using SamuraiApp.Domain;
 
 namespace SamuraiApp.Data
@@ -14,6 +15,11 @@ namespace SamuraiApp.Data
 
     //public DbSet<Horse> Horses { get; set; } we won't add it here so we cann't interact with it in our bussness logic so we will handel it with fluent api
 
+    public static readonly ILoggerFactory ConsoleLoggerFactory = LoggerFactory.Create(builder  => { 
+        builder.AddFilter((category, level) =>
+            category == DbLoggerCategory.Database.Command.Name
+            && level == LogLevel.Information).AddConsole();
+        });
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
       optionsBuilder.UseSqlServer(
