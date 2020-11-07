@@ -22,7 +22,9 @@ namespace SamuraiApp.Data
         });
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-      optionsBuilder.UseSqlServer(
+      optionsBuilder
+                .UseLoggerFactory(ConsoleLoggerFactory).EnableSensitiveDataLogging() //overwrite to see values comming to the log
+                .UseSqlServer(
           "Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = SamuraiAppData");
     }
 
