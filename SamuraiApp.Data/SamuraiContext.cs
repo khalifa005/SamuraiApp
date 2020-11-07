@@ -8,6 +8,7 @@ namespace SamuraiApp.Data
     public DbSet<Samurai> Samurais { get; set; }
     public DbSet<Quote> Quotes { get; set; }
     public DbSet<Clan> Clans { get; set; }
+    public DbSet<Battel> Battels { get; set; }
 
     //public DbSet<SamuraiBattel> SamuraiBattels { get; set; } ef will configure from nav prop
 
