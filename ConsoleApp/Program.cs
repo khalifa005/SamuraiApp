@@ -38,7 +38,7 @@ namespace ConsoleApp
             var query = _context.Samurais;
 
             var objects = query.ToList();
-            //another  way to atchive it
+            //another  way to achieve it
             var samurais = _context.Samurais.ToList(); //after matrializing objects 
 
 
@@ -96,6 +96,7 @@ namespace ConsoleApp
         {
             var samurai = _context.Samurais.FirstOrDefault();
             samurai.Name += "San";
+            _context.Entry(samurai).State = EntityState.Modified;
             _context.SaveChanges();
         }
         private static void RetrieveAndUpdateMultipleSamurais()
