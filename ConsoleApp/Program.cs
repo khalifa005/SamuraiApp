@@ -24,6 +24,27 @@ namespace ConsoleApp
             // MultipleDatabaseOperations();
             // InsertBattle();
             //QueryAndUpdateBattle_Disconnected();
+
+            //InsertNewSamuraiWithAQuote();
+            //InsertNewSamuraiWithManyQuotes();
+            //AddQuoteToExistingSamuraiWhileTracked();
+            //AddQuoteToExistingSamuraiNotTracked(2);
+            //AddQuoteToExistingSamuraiNotTracked_Easy(2);
+            //EagerLoadSamuraiWithQuotes();
+            //ProjectSomeProperties();
+            //ProjectSamuraisWithQuotes();
+            //FilteringWithRelatedData();
+            //ModifyingRelatedDataWhenTracked();
+            //ModifyingRelatedDataWhenNotTracked();
+            //JoinBattleAndSamurai();
+            //EnlistSamuraiIntoABattle();
+            //GetSamuraiWithBattles();
+            //RemoveJoinBetweenSamuraiAndBattleSimple();
+            //AddNewSamuraiWithHorse();
+            //AddNewHorseToSamuraiUsingId();
+            //AddNewHorseToSamuraiObject();
+            //AddNewHorseToDisconnectedSamuraiObject();
+            //ReplaceAHorse();
             GetSamuraisWithHorse();
             GetHorseWithSamurai();
         }

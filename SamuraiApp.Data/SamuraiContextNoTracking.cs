@@ -7,6 +7,11 @@ using System.Text;
 
 namespace SamuraiApp.Data
 {
+    /// <summary>
+    /// to add new migration use 
+    /// Add-Migration MigrationName -Context SamuraiContextNoTracking
+    /// because we have more than one db context 
+    /// </summary>
     public class SamuraiContextNoTracking : DbContext
     {
         public SamuraiContextNoTracking()
